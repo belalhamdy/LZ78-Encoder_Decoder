@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LZ78_Encoder-Decoder.iml" filepath="$PROJECT_DIR$/LZ78_Encoder-Decoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LZ78-Encoder_Decoder.iml" filepath="$PROJECT_DIR$/LZ78-Encoder_Decoder.iml" />
     </modules>
   </component>
 </project>

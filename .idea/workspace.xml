@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f309c10d-ec09-48cb-a9fe-3b47af5829e2" name="Default Changelist" comment="">
+    <list default="true" id="629c4b69-372d-480f-8d0b-16c1c41abd0e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/LZ78.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/company/LZCompression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LZ78_Encoder-Decoder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LZ78-Encoder_Decoder.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,12 +29,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1RuwGfvOx8uXMCt4ktkdfPaLIzB" />
+  <component name="ProjectId" id="1S3bvCOFQmN7REz1Z4KWiJpjbFT" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="restartRequiresConfirmation" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -40,19 +49,36 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+  <component name="RunManager" selected="Application.LZCompression">
+    <configuration name="LZCompression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.LZCompression" />
+      <module name="LZ78-Encoder_Decoder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="LZ78_Encoder-Decoder" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <module name="LZ78-Encoder_Decoder" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LZCompression" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -62,31 +88,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f309c10d-ec09-48cb-a9fe-3b47af5829e2" name="Default Changelist" comment="" />
-      <created>1570530194635</created>
+      <changelist id="629c4b69-372d-480f-8d0b-16c1c41abd0e" name="Default Changelist" comment="" />
+      <created>1570795454865</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570530194635</updated>
-      <workItem from="1570530196345" duration="3290000" />
-      <workItem from="1570752432134" duration="3658000" />
-      <workItem from="1570757157663" duration="5148000" />
-      <workItem from="1570763281262" duration="1333000" />
+      <updated>1570795454865</updated>
+      <workItem from="1570795456631" duration="6361000" />
     </task>
-    <task id="LOCAL-00001" summary="Added Project LZ78-Encoder_Decoder">
-      <created>1570763611071</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1570763611071</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Changed variable line from String to StringBuilder for optimization.">
-      <created>1570763802920</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1570763802920</updated>
-    </task>
-    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,13 +110,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Project LZ78-Encoder_Decoder" />
-    <MESSAGE value="Changed variable line from String to StringBuilder for optimization." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed variable line from String to StringBuilder for optimization." />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
