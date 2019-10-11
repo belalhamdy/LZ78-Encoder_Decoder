@@ -31,7 +31,8 @@ class LZW {
         }
 
         static String Decompress(List<Pair<Integer, Character>> data) throws Exception {
-            String line = "", match;
+            StringBuilder line = new StringBuilder();
+            String match;
             decompressDic.clear();
             decompressDic.put(0, "");
             int prevIdx = 1;
@@ -41,9 +42,9 @@ class LZW {
                 match = decompressDic.get(current.getKey());
                 if (current.getValue() != 0) match += current.getValue();
                 if (!decompressDic.containsValue(match)) decompressDic.put(prevIdx++, match);
-                line += match;
+                line.append(match);
             }
-            return line;
+            return line.toString();
         }
 
         static Map<String, Integer> getCompressDictionary() {
