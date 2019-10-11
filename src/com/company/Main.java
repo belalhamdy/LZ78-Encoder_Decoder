@@ -25,7 +25,7 @@ public class Main {
                 System.out.println("Dictionary : " + LZW.LZW78.getCompressDictionary());
                 System.out.println("---------------------------------------");
             } else if (choice == '2') {
-                System.out.println("Enter the tags to decompress in the following criteria \"Index character\" (Unsupported tags will be ignored), to insert null just type null ,insert \"0 0\" to stop the input.");
+                System.out.println("Enter the tags to decompress in the following criteria \"Index character\" (Unsupported tags will be ignored), to insert null just type null ,insert \"-1 -1\" to stop the input.");
                 List<Pair<Integer, Character>> data = inputTags();
                 try {
                     String Decompressed = LZW.LZW78.Decompress(data);
@@ -59,10 +59,10 @@ public class Main {
             } catch (NumberFormatException e) {
                 continue;
             }
+            if (index == -1 && tempChar.equals("-1")) break;
             if ((tempChar.length() > 1 && !tempChar.equals("null")) || index < 0) continue;
             character = tempChar.charAt(0);
             if (tempChar.equals("null")) character = 0;
-            if (index == 0 && character == '0') break;
             data.add(new Pair<>(index, character));
         }
         return data;
