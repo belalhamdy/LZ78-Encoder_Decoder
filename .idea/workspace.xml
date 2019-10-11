@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="629c4b69-372d-480f-8d0b-16c1c41abd0e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/LZ78.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/LZCompression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/project-template.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LZ78_Encoder-Decoder.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LZ78-Encoder_Decoder.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/LZCompression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/LZCompression.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570795454865</updated>
-      <workItem from="1570795456631" duration="6361000" />
+      <workItem from="1570795456631" duration="7197000" />
     </task>
     <servers />
   </component>

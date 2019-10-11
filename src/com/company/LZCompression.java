@@ -18,12 +18,13 @@ public class LZCompression {
         System.out.println("This is Dardery's version of the LZ78 compression assignment");
         System.out.println("I haven't even ran the code, so... hope for the best");
         System.out.println("--------------------------------");
-        int response = -1;
+        char response;
         do {
             System.out.println("1 - Compress a line of text");
             System.out.println("2 - Decompress a line of text");
             System.out.println("0 - Get the fuck outta here");
-            response = in.nextLine().charAt(0);
+            response = in.next().charAt(0);
+            in.nextLine();
             switch (response) {
                 case '1':
                     System.out.println("Enter your line of text");
