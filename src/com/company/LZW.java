@@ -23,6 +23,7 @@ class LZW {
                     compressDic.put(match, currentIdx++);
                     data.add(new Pair<>(prevIdx, current));
                     match = "";
+                    prevIdx = 0;
                 }
 
             }
