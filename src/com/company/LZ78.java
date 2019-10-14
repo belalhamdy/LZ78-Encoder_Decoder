@@ -1,14 +1,55 @@
 package com.company;
 
+import com.sun.deploy.util.ArrayUtil;
 import javafx.util.Pair;
 
+import java.lang.reflect.Array;
+import java.nio.ByteBuffer;
+import java.nio.ByteOrder;
+import java.nio.CharBuffer;
+import java.nio.IntBuffer;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class LZ78 {
-
     private static List<String> lastDictionary;
+    public static byte[] decompressFromArray(byte[] compressed) throws Exception {
+
+        List<Pair<Integer, Character>> data = new ArrayList<>();
+        for (int i = 0; i < compressed.length; i += 2) {
+            data.add(new Pair<>((int) compressed[i], (char) compressed[i + 1]));
+        }
+
+        char[] ret = decompress(data);
+        byte[] byteArray = new byte[ret.length];
+        for (int i = 0; i < ret.length; i++) {
+            byteArray[i] = (byte)ret[i];
+        }
+        return byteArray;
+    }
+
+    public static byte[] compressToArray(byte[] message) {
+        char[] charArray = new char[message.length];
+        for (int i = 0; i < message.length; i++) {
+            charArray[i] = (char)message[i];
+        }
+        //CharBuffer charBuffer = ByteBuffer.wrap(message).asCharBuffer();
+        //char[] charArray = new char[charBuffer.remaining()];
+        //charBuffer.get(charArray);
+        List<Pair<Integer, Character>> ret = compress(charArray);
+        List<Byte> data = new ArrayList<>();
+        for (int i = 0; i < ret.size(); i++) {
+            data.add(ret.get(i).getKey().byteValue());
+            data.add((byte)ret.get(i).getValue().charValue());
+        }
+        byte[] arr = new byte[data.size()];
+        for (int i = 0; i < data.size(); i++) {
+            arr[i] = data.get(i);
+        }
+        return arr;
+    }
 
     public static char[] decompress(List<Pair<Integer, Character>> compressed) throws Exception {
         ArrayList<String> dictionary = new ArrayList<>();
@@ -18,11 +59,11 @@ public class LZ78 {
         for (Pair<Integer, Character> p : compressed) {
             String entry = "";
             if (p.getKey() != 0) {
-                if (dictionary.size() < p.getKey()){
+                if (dictionary.size() < p.getKey()) {
                     //Just the worst possible errors message.
                     throw new Exception("Compressed data contains invalid pointer to non-existing entries in the dynamically generated dictionary.");
                 }
-                entry = dictionary.get(p.getKey()-1);
+                entry = dictionary.get(p.getKey() - 1);
                 message.append(entry);
             }
             entry += p.getValue();
@@ -30,7 +71,6 @@ public class LZ78 {
             dictionary.add(entry);
         }
         return message.toString().toCharArray();
-
     }
 
     public static List<Pair<Integer, Character>> compress(char[] message) {
@@ -63,7 +103,8 @@ public class LZ78 {
 
         return compressed;
     }
-    public static List<String> getLastDictionary(){
+
+    public static List<String> getLastDictionary() {
         return lastDictionary;
     }
 }

@@ -2,6 +2,10 @@ package com.company;
 
 import javafx.util.Pair;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.OpenOption;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,6 +26,8 @@ public class LZCompression {
         do {
             System.out.println("1 - Compress a line of text");
             System.out.println("2 - Decompress a line of text");
+            System.out.println("3 - Compress a file");
+            System.out.println("4 - Decompress a file");
             System.out.println("0 - Get the fuck outta here");
             response = in.next().charAt(0);
             in.nextLine();
@@ -56,6 +62,30 @@ public class LZCompression {
                         System.out.print("Tags are wack.. better luck next time.");
                         System.out.println("Oh you want a formal text of the problem? Okay...");
                         System.out.println(ex.getMessage());
+                    }
+                    break;
+                case '3':
+                    System.out.println("Enter a file to compress path: ");
+                    String inputC = in.nextLine();
+                    System.out.println("Enter an output location: ");
+                    String outputC = in.nextLine();
+                    try {
+                        Files.write(Paths.get(outputC),LZ78.compressToArray(Files.readAllBytes(Paths.get(inputC))));
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case '4':
+
+                    System.out.println("Enter a file to decompress path: ");
+                    String inputD = in.nextLine();
+                    System.out.println("Enter an output location: ");
+                    String outputD = in.nextLine();
+                    try {
+                        Files.write(Paths.get(outputD),LZ78.decompressFromArray(Files.readAllBytes(Paths.get(inputD))));
+                    } catch (Exception e) {
+                        e.printStackTrace();
                     }
                     break;
                 case '0':

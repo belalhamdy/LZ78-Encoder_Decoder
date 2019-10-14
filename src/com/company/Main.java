@@ -11,6 +11,7 @@ public class Main {
     private static Scanner in = new Scanner(System.in);
 
     public static void main(String[] args) {
+
         System.out.println("Welcome to LZ78 Compression/Decompression");
         while (true) {
             System.out.println("\n1- Compress\n2- Decompress\n0- Exit");
